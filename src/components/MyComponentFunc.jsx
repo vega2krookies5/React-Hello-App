@@ -39,7 +39,9 @@ const MyComponentFunc = ({ name, children }) => {
             <p>상태변수 message = {message}</p>
             <input name="message" value={message} onChange={handleChange} />
             <p>상태변수 username = {username}</p>
-            <input name="username" value={username} onChange={handleChange} />
+            <input name="username" value={username} onChange={handleChange}
+                className={valid ? 'success':'failure'}
+             />
 
         </div>
     );
