@@ -33,7 +33,14 @@ class MyComponent extends Component {
     }; //handleChange
 
     handleEneter = (e) => {
-
+        //Enter key 체크
+        if(e.keyCode === 13){
+            this.setState({
+                isValid: true
+            });
+            //DOM에 직접 접근
+            this.myUsername.focus();
+        }//e.keyCode === 13
     }//handleEneter
 
     //메서드 오버라이딩
