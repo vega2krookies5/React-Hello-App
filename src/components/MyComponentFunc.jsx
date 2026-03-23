@@ -10,6 +10,7 @@ const MyComponentFunc = ({ name, children }) => {
         message: ''
     });
     const [valid, setValid] = useState(false);    
+    const [messageArr, setMessageArr] = useState(['Angular','React','Vue','Ember']);
 
     //비구조화 할당
     const { username, message } = inputs;
