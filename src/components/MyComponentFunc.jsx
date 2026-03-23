@@ -16,6 +16,7 @@ const MyComponentFunc = ({ name, children }) => {
     //Event Handler 함수
     const handleChange = (e) => {
         setInputs({
+            ...inputs,
             [e.target.name]: e.target.value
         });
     } //handleChange
