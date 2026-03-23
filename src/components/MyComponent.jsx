@@ -32,7 +32,7 @@ class MyComponent extends Component {
         });
     }; //handleChange
 
-    handleEneter = (e) => {
+    handleEnter = (e) => {
         //Enter key 체크
         if(e.keyCode === 13){
             this.setState({
