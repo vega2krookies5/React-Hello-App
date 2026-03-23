@@ -21,6 +21,9 @@ MyComponent.defaultProps= {
     name: '기본이름'
 };
 MyComponent.propTypes= {
-    name: PropTypes.string//name props 타입을문자열로설정함
+    //name props 타입을 문자열로설정함
+    name: PropTypes.string,
+    // age props 타입을 숫자타입으로 설정하고 필수 Props
+    age: PropTypes.number.isRequired
 }
 export default MyComponent;
