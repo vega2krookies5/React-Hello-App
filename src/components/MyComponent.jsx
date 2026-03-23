@@ -7,6 +7,13 @@ class MyComponent extends Component {
     state = {
         value: 0,
     };
+    //Event Handler 함수선언
+    handleDecrement = () => {
+        this.setState({
+            value: this.state.value -1
+        });
+    }; //handleDecrement  
+      
     //메서드 오버라이딩
     render() {
         //Destructuring Assignment 적용해서 변수 선언
