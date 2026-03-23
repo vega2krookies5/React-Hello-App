@@ -13,6 +13,8 @@ class MyComponent extends Component {
     //컴포넌트 내부에 상태변수를 포함하는 state 객체선언
     state = {
         value: 0,
+        message: '', 
+        username: ''
     };
     //Event Handler 함수선언
     //handleDecrement() {    
