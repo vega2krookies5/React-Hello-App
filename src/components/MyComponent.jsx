@@ -13,7 +13,7 @@ class MyComponent extends Component {
     //컴포넌트 내부에 상태변수를 포함하는 state 객체선언
     state = {
         value: 0,
-        message: '', 
+        message: '',
         username: ''
     };
     //Event Handler 함수선언
@@ -24,12 +24,17 @@ class MyComponent extends Component {
         });
     }; //handleDecrement  
 
+    handleChange(e) {
+        this.setState({
+            message: e.target.value
+        });
+    }
     //메서드 오버라이딩
     render() {
         //Destructuring Assignment 적용해서 변수 선언
-        const {name, age} = this.props;
-        const {value, message, username} = this.state;
-        const {handleDecrement} = this;
+        const { name, age } = this.props;
+        const { value, message, username } = this.state;
+        const { handleDecrement } = this;
 
         return (
             <div>
@@ -42,21 +47,21 @@ class MyComponent extends Component {
                     })
                 )}>증가</button>
                 <button onClick={handleDecrement}>감소</button>
-                <br/>
+                <br />
                 <p>상태변수 message = {message}</p>
-                <input value={message} onChange={} />
+                <input value={message} onChange={ } />
                 <p>상태변수 username = {username}</p>
-                
+
             </div>
         );
     }
 }//class
 
-MyComponent.defaultProps= {
+MyComponent.defaultProps = {
     name: '기본이름',
     age: 100
 };
-MyComponent.propTypes= {
+MyComponent.propTypes = {
     //name props 타입을 문자열로설정함
     name: PropTypes.string,
     // age props 타입을 숫자타입으로 설정하고 필수 Props
