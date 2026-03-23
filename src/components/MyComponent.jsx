@@ -30,8 +30,6 @@ class MyComponent extends Component {
         });
     }; //handleChange
 
-
-
     //메서드 오버라이딩
     render() {
         //Destructuring Assignment 적용해서 변수 선언
@@ -52,9 +50,9 @@ class MyComponent extends Component {
                 <button onClick={handleDecrement}>감소</button>
                 <br />
                 <p>상태변수 message = {message}</p>
-                <input name={message} value={message} onChange={handleChange} />
+                <input name="message" value={message} onChange={handleChange} />
                 <p>상태변수 username = {username}</p>
-                <input name={username} value={username} onChange={handleChange} />
+                <input name="username" value={username} onChange={handleChange} />
             </div>
         );
     }
