@@ -28,7 +28,7 @@ class MyComponent extends Component {
     render() {
         //Destructuring Assignment 적용해서 변수 선언
         const {name, age} = this.props;
-        const {value} = this.state;
+        const {value, message, username} = this.state;
         const {handleDecrement} = this;
 
         return (
@@ -42,6 +42,9 @@ class MyComponent extends Component {
                     })
                 )}>증가</button>
                 <button onClick={handleDecrement}>감소</button>
+                <br/>
+                <p>상태변수 message = {message}</p>
+                <p>상태변수 username = {username}</p>
             </div>
         );
     }
